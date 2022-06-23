@@ -53,7 +53,7 @@ const Letter = [
 function init() {
     seconds.innerHTML = currentLevel;
     showLetter(Letter);
-    wordInput.addEventListener('input', startMatch);
+    wordInput.addEventListener('input', startMatch());
     setInterval(countdown, 1000);
     setInterval(checkStatus, 50);
 }
