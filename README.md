@@ -11,4 +11,4 @@ Mocht je hem willen spelen:
 
 1. kopieer de url: https://github.com/mchii/EigenGame/
 2. open een terminal of cmd in de map waar je heb wilt hebben
-3. en type daar dan: **git clone ** https://github.com/mchii/EigenGame/
+3. en type daar dan: git clone https://github.com/mchii/EigenGame/
