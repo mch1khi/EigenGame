@@ -5,35 +5,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GAME</title>
+    <title>Type Master</title>
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
     <header class="bg-secondary text-center p-3 mb-5">
-        <h1>Type-curses</h1>
+        <h1>Type Master</h1>
     </header>
+
     <div id="container">
         <p class="lead">Type The Given Letter Within
             <span class="seconds" id="seconds">5</span> Seconds:</p>
-        <h2 class="current-letter" id="current-letter">
+        <h2 class="currentLetter" id="currentLetter">
             <h2></h2>
         </h2>
-        <input type="text" class="form-control form-control-lg" placeholder="Start typing..." id="word-input" autofocus>
+        <input type="text" class="form-control form-control-lg" placeholder="Start typing..." id="LetterInput" autofocus>
         <h4 class="message" id="message"></h4>
 
-        <div id="timeScore">
-            <div id="timePlek">
+        <div id="timeScore" class="row">
+            <div id="timePlek" class="column">
                 <h3>Time Left:
                     <span id="time">0</span>
                 </h3>
             </div>
-            <div id="scorePlek">
+            <div id="scorePlek" class="column">
                 <h3>Score:
                     <span id="score">0</span>
                 </h3>
             </div>
-            <div id="highscorePlek">
+            <div id="highscorePlek" class="column">
                 <h3>High Score:
                     <span id="highscore">0</span>
                 </h3>
@@ -42,7 +43,7 @@
 
         <div class="instructies">
             <div class="instructiesPlek">
-                <h5>Instructies:</h5>
+                <h4><b>Instructies:</b></h4>
                 <p>Typ elk letter in het opgegeven aantal seconden om te scoren. Om opnieuw te spelen, typt u gewoon het huidige letter. Je score wordt gereset.</p>
             </div>
 

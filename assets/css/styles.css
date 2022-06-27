@@ -1,3 +1,40 @@
-* {
-    background-color: aliceblue;
+body {
+    background-color: beige;
+}
+
+#container {
+    text-align: center;
+    font-family: Fantasy;
+}
+
+header {
+    width: 100%;
+    border: 3px solid rgb(23, 23, 23);
+    text-align: center;
+}
+
+.instructies {
+    border: 3px solid rgb(0, 0, 0);
+}
+
+.column {
+    float: left;
+    width: 31.33%;
+    margin: 1%;
+    margin-bottom: 4%;
+    height: 30px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.currentLetter {
+    font-size: 40px;
+}
+
+.instructiesPlek h4 {
+    font-weight: bold;
 }

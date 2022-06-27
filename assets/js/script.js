@@ -12,8 +12,8 @@ let time = currentLevel;
 let score = 0;
 let isPlaying;
 
-const wordInput = document.querySelector('#word-input');
-const currentLetter = document.querySelector('#current-letter');
+const LetterInput = document.querySelector('#LetterInput');
+const currentLetter = document.querySelector('#currentLetter');
 const scoreDisplay = document.querySelector('#score');
 const timeDisplay = document.querySelector('#time');
 const message = document.querySelector('#message');
@@ -53,17 +53,17 @@ const Letter = [
 function init() {
     seconds.innerHTML = currentLevel;
     showLetter(Letter);
-    wordInput.addEventListener('input', startMatch());
+    LetterInput.addEventListener('input', startMatch);
     setInterval(countdown, 1000);
     setInterval(checkStatus, 50);
 }
 
 function startMatch() {
-    if (matchWords()) {
+    if (matchLetter()) {
         isPlaying = true;
         time = currentLevel + 1;
         showLetter(Letter);
-        wordInput.value = '';
+        LetterInput.value = '';
         score++;
     }
 
@@ -77,15 +77,15 @@ function startMatch() {
         highscoreDisplay.innerHTML = sessionStorage['highscore'];
     }
 
-    if (score === -1) {
+    if (score < 0) {
         scoreDisplay.innerHTML = 0;
     } else {
         scoreDisplay.innerHTML = score;
     }
 }
 
-function matchWords() {
-    if (wordInput.value === currentLetter.innerHTML) {
+function matchLetter() {
+    if (LetterInput.value === currentLetter.innerHTML) {
         message.innerHTML = 'Correct!!!';
         return true;
     } else {
@@ -94,9 +94,9 @@ function matchWords() {
     }
 }
 
-function showWord(Letter) {
-    const randIndex = Math.floor(Math.random() * words.length);
-    currentWord.innerHTML = words[randIndex];
+function showLetter(Letter) {
+    const randIndex = Math.floor(Math.random() * Letter.length);
+    currentLetter.innerHTML = Letter[randIndex];
 }
 
 function countdown() {
